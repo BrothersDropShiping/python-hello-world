@@ -5,6 +5,8 @@ metadata:
   description: Testing repo to check the backstage catalog
   annotations:
     backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: 'BrothersDropShiping/python-hello-world'
+
 spec:
   type: service
   lifecycle: production
