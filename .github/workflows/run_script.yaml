@@ -35,12 +35,15 @@ jobs:
           fi
 
       - name: Run script
+        id: run_script
         run: |
           python3 main.py
       - uses: port-labs/port-github-action@v1
         with:
           clientId: ${{ secrets.PORT_CLIENT_ID }}
           clientSecret: ${{ secrets.PORT_CLIENT_SECRET }}
+          blueprint: "python-hello-world-job"
+          properties: '{ "script": "main.py", "status": "${{ steps.run_script.outcome}}" }'
           
 
         
