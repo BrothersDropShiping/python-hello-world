@@ -1,0 +1,27 @@
+name: Scaffhold new service
+on:
+  workflow_dispatch:
+    inputs:
+      service_name:
+        required: true
+        type: string
+      dotnet_version:
+        required: true
+        type: string
+      parent_group:
+        required: true
+        type: string
+      rnd_group:
+        required: true
+        type: string
+
+jobs:
+  run_script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: output-inputs
+        run: |
+          echo "service name - ${{ inputs.service_name }}"
+          echo "dotnet version - ${{ inputs.dotnet_version }}"
+          echo "parent group - ${{ inputs.parent_group }}"
+          echo "rnd group name - ${{ inputs.rnd_group }}"
