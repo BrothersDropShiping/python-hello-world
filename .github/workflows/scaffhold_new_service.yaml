@@ -28,4 +28,5 @@ jobs:
           echo "service name - ${{ inputs.service_name }}"
           echo "dotnet version - ${{ inputs.dotnet_version }}"
           echo "parent group - ${{ inputs.parent_group }}"
+          echo "port context: ${{ inputs.port_context" }}"
           echo "rnd group name - ${{ inputs.rnd_group }}"
